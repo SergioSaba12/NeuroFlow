@@ -29,7 +29,6 @@ import {
   Sparkles,
   Stars,
   Square,
-  Timer,
   Workflow,
   Zap
 } from "lucide-react";
@@ -105,13 +104,18 @@ const copy = {
       copy:
         "Create a named session, choose 25, 45, 60, 90 minutes or a custom duration, and allow only the apps that belong to this block of work.",
       setup: "Session setup",
+      setupSubtitle: "Define your environment and keep focus protected.",
       nameLabel: "Session name",
       nameValue: "Thesis deep work",
+      placeholder: "e.g. Deep work - UI design - Coding",
       duration: "Duration",
       allowed: "Allowed apps",
+      allowedHelp: "You will only be able to use these apps during the session.",
       start: "Start session",
       active: "Active work session",
+      activeLabel: "Study session",
       timer: "42:18",
+      remaining: "time remaining",
       focusState: "Protected focus",
       banner: "Chrome blocked. Return to your allowed workspace.",
       end: "End session",
@@ -250,15 +254,20 @@ const copy = {
       eyebrow: "Feature lanzada",
       title: "Sesión de trabajo protege las apps que tu foco sí necesita.",
       copy:
-        "Crea una sesión con nombre, elige 25, 45, 60, 90 minutos o una duración custom, y permite solo las apps que pertenecen a ese bloque de trabajo.",
+        "Crea una sesión con nombre, elige 25, 45, 60, 90 minutos o una duración personalizada, y permite solo las apps que pertenecen a ese bloque de trabajo.",
       setup: "Crear sesión",
+      setupSubtitle: "Define tu entorno y mantén el foco.",
       nameLabel: "Nombre de sesión",
       nameValue: "Trabajo profundo tesis",
+      placeholder: "p. ej. Deep work · Diseño UI · Coding",
       duration: "Duración",
       allowed: "Apps permitidas",
+      allowedHelp: "Solo podrás usar estas apps durante la sesión.",
       start: "Iniciar sesión",
       active: "Sesión de trabajo activa",
+      activeLabel: "Sesión de estudio",
       timer: "42:18",
+      remaining: "tiempo restante",
       focusState: "Foco protegido",
       banner: "Chrome bloqueado. Vuelve a tu espacio permitido.",
       end: "Terminar sesión",
@@ -798,123 +807,135 @@ function HowItWorks({ t }: { t: Copy }) {
 }
 
 function WorkSessionFeature({ t }: { t: Copy }) {
-  const durations = ["25", "45", "60", "90", "Custom"];
-  const allowedApps = ["Safari", "Notion", "Preview", "VSCode"];
+  const durations = ["25 min", "45 min", "60 min", "90 min", "Otro"];
+  const appRows = [
+    ["ChatGPT", "C"],
+    ["Codex", "Cx"],
+    ["Finder", "F"],
+    ["Mail", "M"],
+    ["Mensajes", "Ms"],
+    ["Safari", "S"],
+    ["Spotify", "Sp"],
+    ["Teléfono", "T"],
+    ["Terminal", ">_"],
+    ["Vista Previa", "VP"]
+  ];
+  const selectedApps = ["ChatGPT", "Safari"];
 
   return (
     <section className="px-4 py-28">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
+      <div className="mx-auto max-w-7xl">
         <SectionHeader
+          center
           eyebrow={t.workSession.eyebrow}
           title={t.workSession.title}
           copy={t.workSession.copy}
         />
-        <Reveal>
-          <div className="glass relative overflow-hidden rounded-[2rem] p-4 md:p-6">
-            <div className="absolute -right-24 -top-24 size-72 rounded-full bg-violet-400/18 blur-3xl" />
-            <div className="absolute -bottom-24 left-8 size-72 rounded-full bg-cyan-300/14 blur-3xl" />
-            <div className="relative grid gap-4 lg:grid-cols-[96px_1fr]">
-              <aside className="glass-soft flex items-center justify-center rounded-[1.5rem] p-4 lg:flex-col lg:justify-start lg:gap-5">
-                {[Compass, FileText, Code2, Timer].map((Icon, index) => (
-                  <div
-                    key={index}
-                    className={cn(
-                      "flex size-12 items-center justify-center rounded-2xl border border-white/10 bg-white/7 text-slate-300",
-                      index === 3 && "border-cyan-100/40 bg-cyan-100/15 text-cyan-100 ambient-ring"
-                    )}
-                  >
-                    <Icon className="size-5" />
-                  </div>
-                ))}
-              </aside>
+        <Reveal className="mt-16">
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/12 bg-[#13030d] p-4 shadow-[0_40px_140px_rgba(0,0,0,0.5)] md:p-7">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_8%,rgba(120,68,130,0.28),transparent_34rem),radial-gradient(circle_at_80%_30%,rgba(20,13,28,0.9),transparent_36rem)]" />
+            <div className="relative grid gap-6 xl:grid-cols-[0.92fr_1.08fr]">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">{t.workSession.setup}</h3>
+                  <p className="mt-2 text-lg text-slate-400">{t.workSession.setupSubtitle}</p>
+                </div>
 
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="glass-soft rounded-[1.5rem] p-5">
-                  <div className="mb-5 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <Timer className="size-5 text-cyan-100" />
-                      <p className="font-semibold text-white">{t.workSession.setup}</p>
-                    </div>
-                    <span className="rounded-full border border-white/10 bg-white/7 px-3 py-1 text-xs text-slate-300">Focus</span>
-                  </div>
-                  <div className="space-y-4">
-                    <div>
-                      <p className="mb-2 text-xs uppercase tracking-[0.18em] text-slate-500">{t.workSession.nameLabel}</p>
-                      <div className="rounded-2xl border border-white/10 bg-black/25 px-4 py-3 text-sm text-white">
-                        {t.workSession.nameValue}
-                      </div>
-                    </div>
-                    <div>
-                      <p className="mb-2 text-xs uppercase tracking-[0.18em] text-slate-500">{t.workSession.duration}</p>
-                      <div className="grid grid-cols-5 gap-2">
-                        {durations.map((duration, index) => (
-                          <div
-                            key={duration}
-                            className={cn(
-                              "rounded-xl border border-white/10 bg-white/6 py-2 text-center text-xs text-slate-300",
-                              index === 1 && "border-cyan-100/40 bg-cyan-100/15 text-white"
-                            )}
-                          >
-                            {duration}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <p className="mb-2 text-xs uppercase tracking-[0.18em] text-slate-500">{t.workSession.allowed}</p>
-                      <div className="grid grid-cols-2 gap-2">
-                        {allowedApps.map((app) => (
-                          <div key={app} className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/6 px-3 py-2 text-sm text-slate-200">
-                            <Check className="size-4 text-cyan-100" />
-                            {app}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <button className="button-glow flex min-h-12 w-full items-center justify-center rounded-full bg-white font-semibold text-slate-950">
-                      {t.workSession.start}
-                    </button>
+                <div className="rounded-[1.75rem] border border-white/12 bg-white/[0.055] p-5 md:p-7">
+                  <p className="text-sm font-semibold text-slate-500">{t.workSession.nameLabel}</p>
+                  <div className="mt-5 text-2xl font-semibold text-white/70">{t.workSession.placeholder}</div>
+                </div>
+
+                <div className="rounded-[1.75rem] border border-white/12 bg-white/[0.055] p-5 md:p-7">
+                  <p className="text-sm font-semibold text-slate-500">{t.workSession.duration}</p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {durations.map((duration, index) => (
+                      <span
+                        key={duration}
+                        className={cn(
+                          "rounded-full px-5 py-3 text-sm font-semibold text-slate-300",
+                          index === 0
+                            ? "bg-gradient-to-r from-sky-300 to-violet-500 text-white"
+                            : "bg-white/7"
+                        )}
+                      >
+                        {duration}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
-                <div className="glass-soft relative overflow-hidden rounded-[1.5rem] p-5">
-                  <div className="absolute left-1/2 top-14 size-44 -translate-x-1/2 rounded-full bg-cyan-300/12 blur-3xl breathe" />
-                  <div className="relative">
-                    <div className="mb-6 flex items-center justify-between">
-                      <p className="font-semibold text-white">{t.workSession.active}</p>
-                      <span className="flex items-center gap-2 rounded-full border border-cyan-100/25 bg-cyan-100/10 px-3 py-1 text-xs text-cyan-100">
-                        <span className="size-2 rounded-full bg-cyan-100" />
-                        {t.workSession.focusState}
-                      </span>
-                    </div>
-                    <div className="py-8 text-center">
-                      <motion.div
-                        className="bg-gradient-to-r from-cyan-200 to-violet-300 bg-clip-text text-7xl font-semibold tracking-tight text-transparent md:text-8xl"
-                        animate={{ opacity: [0.78, 1, 0.78] }}
-                        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                      >
-                        {t.workSession.timer}
-                      </motion.div>
-                    </div>
-                    <div className="mb-5 flex items-center gap-3 rounded-2xl border border-yellow-200/35 bg-yellow-200/14 px-4 py-3 text-sm text-yellow-50">
-                      <ShieldAlert className="size-5 shrink-0 text-yellow-200" />
-                      {t.workSession.banner}
-                    </div>
-                    <button className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-red-300/30 bg-red-500/18 font-semibold text-red-100">
-                      <Square className="size-4 fill-current" />
-                      {t.workSession.end}
-                    </button>
+                <div className="rounded-[1.75rem] border border-white/12 bg-white/[0.055] p-5 md:p-7">
+                  <p className="text-sm font-semibold text-slate-500">{t.workSession.allowed}</p>
+                  <p className="mt-4 text-sm font-medium text-slate-500">{t.workSession.allowedHelp}</p>
+                  <div className="mt-7 max-h-[430px] space-y-5 overflow-hidden pr-2">
+                    {appRows.map(([app, label]) => {
+                      const selected = selectedApps.includes(app);
+                      return (
+                        <div key={app} className="flex items-center justify-between gap-4">
+                          <div className="flex items-center gap-4">
+                            <span className={cn(
+                              "flex size-8 items-center justify-center rounded-lg text-xs font-bold text-white shadow-lg",
+                              selected ? "bg-gradient-to-br from-sky-300 to-violet-500" : "bg-white/12"
+                            )}>
+                              {label}
+                            </span>
+                            <span className={cn("text-xl font-semibold", selected ? "text-white" : "text-slate-300")}>{app}</span>
+                          </div>
+                          <span className={cn(
+                            "flex size-8 items-center justify-center rounded-lg border",
+                            selected ? "border-sky-200/60 bg-sky-200/15 text-sky-100" : "border-white/12 bg-black/10"
+                          )}>
+                            {selected ? <Check className="size-5" /> : null}
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="relative mt-4 grid gap-3 md:grid-cols-3">
-              {t.workSession.points.map((point) => (
-                <div key={point} className="rounded-2xl border border-white/10 bg-white/6 p-4 text-sm leading-6 text-slate-300">
-                  {point}
+              <div className="space-y-6">
+                <div className="rounded-[1.75rem] border border-white/12 bg-white/[0.055] p-6 md:p-10">
+                  <div className="text-center">
+                    <p className="text-sm font-semibold tracking-[0.28em] text-white/35">{t.workSession.activeLabel}</p>
+                    <motion.div
+                      className="mt-10 bg-gradient-to-r from-sky-300 to-violet-500 bg-clip-text text-8xl font-light tracking-[0.08em] text-transparent md:text-[8.5rem]"
+                      animate={{ opacity: [0.82, 1, 0.82] }}
+                      transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
+                    >
+                      24:54
+                    </motion.div>
+                    <div className="mt-10 h-2 overflow-hidden rounded-full bg-white/8">
+                      <div className="h-full w-[12%] rounded-full bg-gradient-to-r from-sky-300 to-violet-500" />
+                    </div>
+                    <p className="mt-7 text-sm font-semibold text-white/35">{t.workSession.remaining}</p>
+                  </div>
                 </div>
-              ))}
+
+                <div className="rounded-[1.75rem] border border-white/12 bg-white/[0.055] p-5 md:p-7">
+                  <p className="text-sm font-semibold text-slate-500">{t.workSession.allowed}</p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {selectedApps.map((app) => (
+                      <span key={app} className="rounded-full border border-white/10 bg-white/7 px-5 py-2 text-sm font-semibold text-slate-300">
+                        {app}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex min-h-16 items-center justify-center gap-3 rounded-[1.5rem] border border-rose-300/25 bg-rose-500/14 text-xl font-semibold text-rose-300">
+                  <Square className="size-5 fill-current" />
+                  {t.workSession.end}
+                </div>
+
+                <div className="rounded-[1.5rem] border border-yellow-200/30 bg-yellow-200/10 p-5 text-yellow-50">
+                  <div className="flex items-center gap-3">
+                    <ShieldAlert className="size-5 text-yellow-200" />
+                    <p className="text-lg font-semibold">{t.workSession.banner}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </Reveal>
