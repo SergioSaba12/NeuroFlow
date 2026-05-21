@@ -117,6 +117,8 @@ const copy = {
       timer: "42:18",
       remaining: "time remaining",
       focusState: "Protected focus",
+      loadState: "Elevated load detected",
+      loadCopy: "ElyraOs softens the environment, reduces visual intensity and keeps only the permitted path visible.",
       banner: "Chrome blocked. Return to your allowed workspace.",
       end: "End session",
       points: [
@@ -269,6 +271,8 @@ const copy = {
       timer: "42:18",
       remaining: "tiempo restante",
       focusState: "Foco protegido",
+      loadState: "Carga elevada detectada",
+      loadCopy: "ElyraOs suaviza el entorno, baja la intensidad visual y deja visible solo el camino permitido.",
       banner: "Chrome bloqueado. Vuelve a tu espacio permitido.",
       end: "Terminar sesión",
       points: [
@@ -834,6 +838,20 @@ function WorkSessionFeature({ t }: { t: Copy }) {
         <Reveal className="mt-16">
           <div className="relative overflow-hidden rounded-[2rem] border border-white/12 bg-[#13030d] p-4 shadow-[0_40px_140px_rgba(0,0,0,0.5)] md:p-7">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_8%,rgba(120,68,130,0.28),transparent_34rem),radial-gradient(circle_at_80%_30%,rgba(20,13,28,0.9),transparent_36rem)]" />
+            <div className="relative mb-6 flex flex-col gap-3 rounded-[1.5rem] border border-rose-200/20 bg-rose-500/10 p-4 text-rose-50 md:flex-row md:items-center md:justify-between md:px-6">
+              <div className="flex items-center gap-3">
+                <span className="flex size-9 items-center justify-center rounded-full border border-rose-200/30 bg-rose-200/12">
+                  <Radio className="size-4 text-rose-100" />
+                </span>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-rose-100/80">{t.workSession.loadState}</p>
+                  <p className="mt-1 text-sm text-rose-50/70">{t.workSession.loadCopy}</p>
+                </div>
+              </div>
+              <span className="w-fit rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm font-semibold text-white/75">
+                {t.workSession.focusState}
+              </span>
+            </div>
             <div className="relative grid gap-6 xl:grid-cols-[0.92fr_1.08fr]">
               <div className="space-y-6">
                 <div>
