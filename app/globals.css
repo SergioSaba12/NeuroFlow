@@ -92,23 +92,37 @@ body {
 }
 
 .brand-word {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.24em;
   font-size: clamp(2.05rem, 6vw, 5.6rem);
   font-weight: 300;
-  letter-spacing: 0.42em;
+  letter-spacing: 0.34em;
   line-height: 1;
-  padding-left: 0.42em;
+  padding-left: 0.34em;
   text-shadow:
     0 0 18px rgba(255, 255, 255, 0.22),
     0 0 32px rgba(133, 211, 255, 0.12);
+}
+
+.brand-os {
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
+  background: linear-gradient(90deg, #86dfff, #a28cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
 }
 
 .brand-tagline {
   max-width: min(92vw, 62rem);
   font-size: clamp(0.72rem, 1.6vw, 1rem);
   font-weight: 500;
-  letter-spacing: 0.45em;
+  letter-spacing: 0.42em;
   line-height: 1.8;
-  padding-left: 0.45em;
+  padding-left: 0.42em;
   text-transform: uppercase;
   background: linear-gradient(90deg, #a8e7ff, #9dbbff 46%, #d39aff 100%);
   -webkit-background-clip: text;
@@ -119,8 +133,9 @@ body {
 
 @media (max-width: 640px) {
   .brand-word {
-    letter-spacing: 0.24em;
-    padding-left: 0.24em;
+    gap: 0.16em;
+    letter-spacing: 0.18em;
+    padding-left: 0.18em;
   }
 
   .brand-tagline {

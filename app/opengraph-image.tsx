@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "ElyraOs - Adapt your environment. Protect your mind.";
+export const alt = "ElyraOs - Adaptive technology. Human focus. Endless flow.";
 export const size = {
   width: 1200,
   height: 630
@@ -10,14 +10,14 @@ export const contentType = "image/png";
 
 function ElyraOsMark() {
   return (
-    <svg width="390" height="300" viewBox="0 0 220 170" style={{ overflow: "visible" }}>
+    <svg width="310" height="310" viewBox="0 0 220 220" style={{ overflow: "visible" }}>
       <defs>
-        <linearGradient id="og-core" x1="18" y1="24" x2="198" y2="138" gradientUnits="userSpaceOnUse">
+        <linearGradient id="og-core" x1="38" y1="42" x2="184" y2="182" gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#9eeaff" />
           <stop offset="0.45" stopColor="#5fb6ff" />
           <stop offset="1" stopColor="#b86cff" />
         </linearGradient>
-        <linearGradient id="og-edge" x1="25" y1="28" x2="205" y2="145" gradientUnits="userSpaceOnUse">
+        <linearGradient id="og-edge" x1="44" y1="46" x2="184" y2="178" gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#ffffff" />
           <stop offset="0.35" stopColor="#74dcff" />
           <stop offset="0.72" stopColor="#a992ff" />
@@ -39,36 +39,42 @@ function ElyraOsMark() {
         </filter>
       </defs>
       <path
-        d="M40 128V60C40 22 88 17 109 49L137 91C150 111 180 101 180 77V51"
+        d="M111 34C68 34 35 68 35 111C35 154 68 186 111 186C154 186 186 154 186 111C186 68 154 34 111 34Z"
         fill="none"
         stroke="url(#og-core)"
-        strokeWidth="48"
+        strokeWidth="30"
         strokeLinecap="round"
         strokeLinejoin="round"
-        opacity="0.78"
+        opacity="0.76"
         filter="url(#og-glow)"
       />
       <path
-        d="M40 128V60C40 22 88 17 109 49L137 91C150 111 180 101 180 77V51"
+        d="M111 34C68 34 35 68 35 111C35 154 68 186 111 186C154 186 186 154 186 111C186 68 154 34 111 34Z"
         fill="none"
         stroke="url(#og-edge)"
-        strokeWidth="4.5"
+        strokeWidth="3.5"
         strokeLinecap="round"
         strokeLinejoin="round"
         opacity="0.98"
       />
       <path
-        d="M54 124C54 105 66 96 81 100C95 104 99 121 88 134C77 147 54 143 54 124Z"
-        fill="url(#og-core)"
-        opacity="0.44"
+        d="M65 142C74 119 101 113 126 104C154 94 167 74 154 55C176 72 181 105 162 128C140 155 99 156 65 142Z"
+        fill="none"
+        stroke="url(#og-core)"
+        strokeWidth="22"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity="0.72"
+        filter="url(#og-glow)"
       />
       <path
-        d="M174 50C174 34 190 28 199 39C208 51 202 68 189 72"
+        d="M65 142C74 119 101 113 126 104C154 94 167 74 154 55"
         fill="none"
-        stroke="#d7adff"
-        strokeWidth="20"
+        stroke="url(#og-edge)"
+        strokeWidth="3.5"
         strokeLinecap="round"
-        opacity="0.48"
+        strokeLinejoin="round"
+        opacity="0.98"
       />
     </svg>
   );
@@ -115,6 +121,9 @@ export default function Image() {
           <ElyraOsMark />
           <div
             style={{
+              display: "flex",
+              alignItems: "baseline",
+              justifyContent: "center",
               fontSize: 86,
               fontWeight: 300,
               letterSpacing: 36,
@@ -123,7 +132,8 @@ export default function Image() {
               textShadow: "0 0 28px rgba(255,255,255,0.25)"
             }}
           >
-            ELYRAOS
+            <span>ELYRA</span>
+            <span style={{ color: "#8fb7ff", fontSize: 60, letterSpacing: 7, marginLeft: 20 }}>OS</span>
           </div>
           <div
             style={{
@@ -137,7 +147,7 @@ export default function Image() {
               backgroundClip: "text"
             }}
           >
-            ADAPT YOUR ENVIRONMENT. PROTECT YOUR MIND.
+            ADAPTIVE TECHNOLOGY. HUMAN FOCUS. ENDLESS FLOW.
           </div>
           <div
             style={{

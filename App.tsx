@@ -48,7 +48,7 @@ const copy = {
   en: {
     nav: { overlay: "Overlay", apps: "Apps", privacy: "Privacy", waitlist: "Waitlist", cta: "Join waitlist" },
     hero: {
-      brandTagline: "ADAPT YOUR ENVIRONMENT. PROTECT YOUR MIND.",
+      brandTagline: "ADAPTIVE TECHNOLOGY. HUMAN FOCUS. ENDLESS FLOW.",
       eyebrow: "A cognitive layer for macOS",
       title: "Your Mac, adapted to your mind.",
       subtitle:
@@ -195,7 +195,7 @@ const copy = {
   es: {
     nav: { overlay: "Overlay", apps: "Apps", privacy: "Privacidad", waitlist: "Lista", cta: "Unirme" },
     hero: {
-      brandTagline: "ADAPTA TU ENTORNO. PROTEGE TU MENTE.",
+      brandTagline: "ADAPTIVE TECHNOLOGY. HUMAN FOCUS. ENDLESS FLOW.",
       eyebrow: "Una capa cognitiva para macOS",
       title: "Tu Mac, adaptado a tu mente.",
       subtitle:
@@ -376,20 +376,20 @@ function LogoMark({ className = "size-12" }: { className?: string }) {
 
   return (
     <span className={cn("logo-orb relative inline-flex items-center justify-center", className)} aria-hidden="true">
-      <svg viewBox="0 0 220 170" className="h-full w-full overflow-visible" role="img">
+      <svg viewBox="0 0 220 220" className="h-full w-full overflow-visible" role="img">
         <defs>
-          <linearGradient id={coreId} x1="18" y1="24" x2="198" y2="138" gradientUnits="userSpaceOnUse">
+          <linearGradient id={coreId} x1="38" y1="42" x2="184" y2="182" gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor="#93e8ff" />
-            <stop offset="0.45" stopColor="#5caeff" />
+            <stop offset="0.42" stopColor="#5caeff" />
             <stop offset="1" stopColor="#b66dff" />
           </linearGradient>
-          <linearGradient id={edgeId} x1="25" y1="28" x2="205" y2="145" gradientUnits="userSpaceOnUse">
+          <linearGradient id={edgeId} x1="44" y1="46" x2="184" y2="178" gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor="#f6fbff" />
             <stop offset="0.38" stopColor="#72d8ff" />
             <stop offset="0.72" stopColor="#9d8cff" />
             <stop offset="1" stopColor="#fff0ff" />
           </linearGradient>
-          <filter id={glowId} x="-60%" y="-70%" width="220%" height="240%">
+          <filter id={glowId} x="-65%" y="-65%" width="230%" height="230%">
             <feGaussianBlur stdDeviation="7" result="blur" />
             <feColorMatrix
               in="blur"
@@ -404,36 +404,42 @@ function LogoMark({ className = "size-12" }: { className?: string }) {
           </filter>
         </defs>
         <path
-          d="M40 128V60C40 22 88 17 109 49L137 91C150 111 180 101 180 77V51"
+          d="M111 34C68 34 35 68 35 111C35 154 68 186 111 186C154 186 186 154 186 111C186 68 154 34 111 34Z"
           fill="none"
           stroke={`url(#${coreId})`}
-          strokeWidth="48"
+          strokeWidth="30"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.74"
+          filter={`url(#${glowId})`}
+        />
+        <path
+          d="M111 34C68 34 35 68 35 111C35 154 68 186 111 186C154 186 186 154 186 111C186 68 154 34 111 34Z"
+          fill="none"
+          stroke={`url(#${edgeId})`}
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.95"
+        />
+        <path
+          d="M65 142C74 119 101 113 126 104C154 94 167 74 154 55C176 72 181 105 162 128C140 155 99 156 65 142Z"
+          fill="none"
+          stroke={`url(#${coreId})`}
+          strokeWidth="22"
           strokeLinecap="round"
           strokeLinejoin="round"
           opacity="0.72"
           filter={`url(#${glowId})`}
         />
         <path
-          d="M40 128V60C40 22 88 17 109 49L137 91C150 111 180 101 180 77V51"
+          d="M65 142C74 119 101 113 126 104C154 94 167 74 154 55"
           fill="none"
           stroke={`url(#${edgeId})`}
-          strokeWidth="4"
+          strokeWidth="3.5"
           strokeLinecap="round"
           strokeLinejoin="round"
-          opacity="0.95"
-        />
-        <path
-          d="M54 124C54 105 66 96 81 100C95 104 99 121 88 134C77 147 54 143 54 124Z"
-          fill={`url(#${coreId})`}
-          opacity="0.42"
-        />
-        <path
-          d="M174 50C174 34 190 28 199 39C208 51 202 68 189 72"
-          fill="none"
-          stroke="#d6b5ff"
-          strokeWidth="20"
-          strokeLinecap="round"
-          opacity="0.45"
+          opacity="0.98"
         />
       </svg>
     </span>
@@ -443,7 +449,10 @@ function LogoMark({ className = "size-12" }: { className?: string }) {
 function BrandWordmark({ tagline, compact = false }: { tagline?: string; compact?: boolean }) {
   return (
     <div className={cn("flex flex-col items-center", compact ? "gap-1" : "gap-4")}>
-      <div className="brand-word text-white">ELYRAOS</div>
+      <div className="brand-word text-white">
+        <span>ELYRA</span>
+        <span className="brand-os">OS</span>
+      </div>
       {tagline ? <div className="brand-tagline">{tagline}</div> : null}
     </div>
   );
@@ -666,7 +675,7 @@ function Hero({ t }: { t: Copy }) {
       <div className="relative mx-auto max-w-6xl text-center">
         <motion.div initial="hidden" animate="visible" variants={stagger}>
           <motion.div variants={fadeUp} className="mx-auto mb-10 flex flex-col items-center">
-            <LogoMark className="mb-5 h-36 w-48 md:h-44 md:w-64" />
+            <LogoMark className="mb-5 size-40 md:size-56" />
             <BrandWordmark tagline={t.hero.brandTagline} />
           </motion.div>
           <motion.div variants={fadeUp} className="mx-auto mb-7 flex w-fit items-center gap-2 rounded-full border border-white/12 bg-white/7 px-4 py-2 text-sm text-cyan-100 backdrop-blur-xl">

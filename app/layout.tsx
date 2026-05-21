@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "ElyraOs - Adapt your environment. Protect your mind."
+        alt: "ElyraOs - Adaptive technology. Human focus. Endless flow."
       }
     ]
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ElyraOs - The cognitive layer for macOS",
     description:
-      "Adapt your environment. Protect your mind.",
+      "Adaptive technology. Human focus. Endless flow.",
     images: ["/opengraph-image"]
   }
 };
