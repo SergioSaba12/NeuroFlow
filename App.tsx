@@ -52,7 +52,7 @@ const copy = {
       eyebrow: "A cognitive layer for macOS",
       title: "Your Mac, adapted to your mind.",
       subtitle:
-        "NeuroFlow lives above your favorite apps, detects digital overload, simplifies information and protects your focus before your workspace becomes noise.",
+        "ElyraOs lives above your favorite apps, detects digital overload, simplifies information and protects your focus before your workspace becomes noise.",
       primary: "Join the waitlist",
       secondary: "Watch concept demo"
     },
@@ -74,13 +74,13 @@ const copy = {
       eyebrow: "The friction",
       title: "Modern software was not designed for human attention.",
       copy:
-        "Most tools ask you to organize more, track more and manage more. NeuroFlow does the opposite: it reduces the cognitive noise between you and the work that matters.",
+        "Most tools ask you to organize more, track more and manage more. ElyraOs does the opposite: it reduces the cognitive noise between you and the work that matters.",
       items: ["Too many tabs", "Too many notifications", "Dense documents", "Scattered ideas", "Context switching", "Digital fatigue"],
       itemCopy: "A small demand on attention that compounds across the day."
     },
     solution: {
       eyebrow: "The layer",
-      title: "NeuroFlow becomes a calm layer above your workflow.",
+      title: "ElyraOs becomes a calm layer above your workflow.",
       copy:
         "It detects context with permission, understands what the moment needs and gently adapts the environment around your attention.",
       cards: [
@@ -94,7 +94,7 @@ const copy = {
       eyebrow: "How it works",
       title: "A digital nervous system for your Mac.",
       steps: [
-        ["01", "NeuroFlow observes context", "Detects active apps, window titles, task switching and reading sessions with user permission."],
+        ["01", "ElyraOs observes context", "Detects active apps, window titles, task switching and reading sessions with user permission."],
         ["02", "It understands cognitive load", "Estimates overload, distraction, fatigue and focus state from ambient signals."],
         ["03", "It adapts the environment", "Shows contextual overlays, simplifies information and creates calm workspaces."]
       ]
@@ -116,8 +116,8 @@ const copy = {
       banner: "Chrome blocked. Return to your allowed workspace.",
       end: "End session",
       points: [
-        "NeuroFlow watches the currently active macOS app during the session.",
-        "If you switch to an app outside the allowed list, NeuroFlow comes forward automatically.",
+        "ElyraOs watches the currently active macOS app during the session.",
+        "If you switch to an app outside the allowed list, ElyraOs comes forward automatically.",
         "A clear yellow banner names the blocked app without shaming or breaking the flow."
       ]
     },
@@ -125,7 +125,7 @@ const copy = {
       eyebrow: "Native context",
       title: "It works where you already work.",
       copy:
-        "NeuroFlow is not another tab, dashboard or place to maintain. It floats above selected macOS apps while your real work stays where it belongs.",
+        "ElyraOs is not another tab, dashboard or place to maintain. It floats above selected macOS apps while your real work stays where it belongs.",
       items: [
         ["Safari", "Summarize articles, simplify reading and extract key ideas."],
         ["Notion", "Organize scattered notes and convert thoughts into structure."],
@@ -141,7 +141,7 @@ const copy = {
       eyebrow: "Different rhythms",
       title: "Built for minds that do not fit default software.",
       copy:
-        "NeuroFlow does not try to fix people. It adapts software around different cognitive rhythms, reducing friction between human cognition and digital environments.",
+        "ElyraOs does not try to fix people. It adapts software around different cognitive rhythms, reducing friction between human cognition and digital environments.",
       benefits: ["Less visual noise", "Fewer interruptions", "Easier reading", "Task continuity", "Idea capture without losing flow", "Adaptive environments", "Predictable routines"]
     },
     features: {
@@ -150,7 +150,7 @@ const copy = {
       items: [
         ["Cognitive Weather", "A subtle signal shows whether your workspace feels focused, overloaded, fatigued or calm."],
         ["Cognitive Gravity", "Important elements become clearer while distractions recede into the background."],
-        ["Predictive Focus", "NeuroFlow prepares quiet sessions around the moments you usually enter deep work."],
+        ["Predictive Focus", "ElyraOs prepares quiet sessions around the moments you usually enter deep work."],
         ["Semantic Memory", "Recover ideas, notes and documents by meaning instead of remembering filenames."],
         ["Invisible Interface", "During deep work, non-essential UI fades away until you actually need it."],
         ["Nova Orb", "A quiet AI presence that appears only when it can reduce friction."]
@@ -160,7 +160,7 @@ const copy = {
       eyebrow: "Trust",
       title: "Private by design. Calm by default.",
       copy:
-        "You control what NeuroFlow can observe. Permissions are explicit, local-first architecture is preferred where possible, cloud AI is optional and the Privacy Center stays transparent.",
+        "You control what ElyraOs can observe. Permissions are explicit, local-first architecture is preferred where possible, cloud AI is optional and the Privacy Center stays transparent.",
       center: "Privacy Center",
       toggles: ["Observe active app", "Read selected documents", "Enable overlays", "Enable local memory", "Enable cloud AI", "Privacy blur"]
     },
@@ -181,16 +181,16 @@ const copy = {
     waitlist: {
       eyebrow: "Early access",
       title: "Your computer should understand your attention.",
-      copy: "Join the early waitlist for NeuroFlow and help shape the future of human-centered computing.",
+      copy: "Join the early waitlist for ElyraOs and help shape the future of human-centered computing.",
       placeholder: "you@domain.com",
       button: "Join the waitlist",
-      success: "You are on the early list. NeuroFlow will keep this quiet for now.",
+      success: "You are on the early list. ElyraOs will keep this quiet for now.",
       error: "Enter a valid email to join the early list.",
       sendError: "We could not send the signup yet. Try again in a moment.",
       configError: "Email notifications are not configured yet.",
       secondary: "Explore the concept"
     },
-    footer: ["NeuroFlow - Calm computing for macOS.", "Designed for human attention, built for macOS."]
+    footer: ["ElyraOs - Calm computing for macOS.", "Designed for human attention, built for macOS."]
   },
   es: {
     nav: { overlay: "Overlay", apps: "Apps", privacy: "Privacidad", waitlist: "Lista", cta: "Unirme" },
@@ -199,7 +199,7 @@ const copy = {
       eyebrow: "Una capa cognitiva para macOS",
       title: "Tu Mac, adaptado a tu mente.",
       subtitle:
-        "NeuroFlow vive sobre tus apps favoritas, detecta la sobrecarga digital, simplifica la información y protege tu foco antes de que tu espacio de trabajo se convierta en ruido.",
+        "ElyraOs vive sobre tus apps favoritas, detecta la sobrecarga digital, simplifica la información y protege tu foco antes de que tu espacio de trabajo se convierta en ruido.",
       primary: "Unirme a la lista",
       secondary: "Ver demo conceptual"
     },
@@ -221,13 +221,13 @@ const copy = {
       eyebrow: "La fricción",
       title: "El software moderno no fue diseñado para la atención humana.",
       copy:
-        "La mayoría de herramientas te piden organizar más, medir más y gestionar más. NeuroFlow hace lo contrario: reduce el ruido cognitivo entre tú y el trabajo que importa.",
+        "La mayoría de herramientas te piden organizar más, medir más y gestionar más. ElyraOs hace lo contrario: reduce el ruido cognitivo entre tú y el trabajo que importa.",
       items: ["Demasiadas pestañas", "Demasiadas notificaciones", "Documentos densos", "Ideas dispersas", "Cambio constante de contexto", "Fatiga digital"],
       itemCopy: "Una pequeña demanda de atención que se acumula durante el día."
     },
     solution: {
       eyebrow: "La capa",
-      title: "NeuroFlow se convierte en una capa tranquila sobre tu flujo de trabajo.",
+      title: "ElyraOs se convierte en una capa tranquila sobre tu flujo de trabajo.",
       copy:
         "Detecta el contexto con tu permiso, entiende lo que necesita cada momento y adapta suavemente el entorno alrededor de tu atención.",
       cards: [
@@ -241,7 +241,7 @@ const copy = {
       eyebrow: "Cómo funciona",
       title: "Un sistema nervioso digital para tu Mac.",
       steps: [
-        ["01", "NeuroFlow observa el contexto", "Detecta apps activas, títulos de ventanas, cambios de tarea y sesiones de lectura con tu permiso."],
+        ["01", "ElyraOs observa el contexto", "Detecta apps activas, títulos de ventanas, cambios de tarea y sesiones de lectura con tu permiso."],
         ["02", "Entiende la carga cognitiva", "Estima sobrecarga, distracción, fatiga y estado de foco a partir de señales ambientales."],
         ["03", "Adapta el entorno", "Muestra overlays contextuales, simplifica información y crea espacios de trabajo más calmados."]
       ]
@@ -263,8 +263,8 @@ const copy = {
       banner: "Chrome bloqueado. Vuelve a tu espacio permitido.",
       end: "Terminar sesión",
       points: [
-        "NeuroFlow observa la app activa de macOS durante la sesión.",
-        "Si cambias a una app fuera de la lista permitida, NeuroFlow salta al frente automáticamente.",
+        "ElyraOs observa la app activa de macOS durante la sesión.",
+        "Si cambias a una app fuera de la lista permitida, ElyraOs salta al frente automáticamente.",
         "Un banner amarillo nombra la app bloqueada sin culpabilizar ni romper el flujo."
       ]
     },
@@ -272,7 +272,7 @@ const copy = {
       eyebrow: "Contexto nativo",
       title: "Funciona donde ya trabajas.",
       copy:
-        "NeuroFlow no es otra pestaña, otro dashboard ni otro lugar que mantener. Flota sobre apps seleccionadas de macOS mientras tu trabajo real sigue donde pertenece.",
+        "ElyraOs no es otra pestaña, otro dashboard ni otro lugar que mantener. Flota sobre apps seleccionadas de macOS mientras tu trabajo real sigue donde pertenece.",
       items: [
         ["Safari", "Resume artículos, simplifica la lectura y extrae ideas clave."],
         ["Notion", "Ordena notas dispersas y convierte pensamientos en estructura."],
@@ -288,7 +288,7 @@ const copy = {
       eyebrow: "Ritmos distintos",
       title: "Diseñado para mentes que no encajan en el software por defecto.",
       copy:
-        "NeuroFlow no intenta arreglar a las personas. Adapta el software alrededor de distintos ritmos cognitivos, reduciendo la fricción entre la mente humana y los entornos digitales.",
+        "ElyraOs no intenta arreglar a las personas. Adapta el software alrededor de distintos ritmos cognitivos, reduciendo la fricción entre la mente humana y los entornos digitales.",
       benefits: ["Menos ruido visual", "Menos interrupciones", "Lectura más fácil", "Continuidad de tarea", "Captura de ideas sin perder el flujo", "Entornos adaptativos", "Rutinas digitales predecibles"]
     },
     features: {
@@ -297,7 +297,7 @@ const copy = {
       items: [
         ["Clima Cognitivo", "Una señal sutil indica si tu espacio se siente enfocado, saturado, fatigado o en calma."],
         ["Gravedad Cognitiva", "Los elementos importantes ganan claridad mientras las distracciones pasan al fondo."],
-        ["Foco Predictivo", "NeuroFlow prepara sesiones tranquilas en los momentos en los que sueles entrar en trabajo profundo."],
+        ["Foco Predictivo", "ElyraOs prepara sesiones tranquilas en los momentos en los que sueles entrar en trabajo profundo."],
         ["Memoria Semántica", "Recupera ideas, notas y documentos por significado, no por nombre de archivo."],
         ["Interfaz Invisible", "Durante el trabajo profundo, lo no esencial se desvanece hasta que realmente lo necesitas."],
         ["Orbe Nova", "Una presencia de IA silenciosa que aparece solo cuando puede reducir fricción."]
@@ -307,7 +307,7 @@ const copy = {
       eyebrow: "Confianza",
       title: "Privado por diseño. Calmado por defecto.",
       copy:
-        "Tú controlas lo que NeuroFlow puede observar. Los permisos son explícitos, la arquitectura prioriza lo local cuando es posible, la IA en la nube es opcional y el Centro de Privacidad es transparente.",
+        "Tú controlas lo que ElyraOs puede observar. Los permisos son explícitos, la arquitectura prioriza lo local cuando es posible, la IA en la nube es opcional y el Centro de Privacidad es transparente.",
       center: "Centro de Privacidad",
       toggles: ["Observar app activa", "Leer documentos seleccionados", "Activar overlays", "Activar memoria local", "Activar IA en la nube", "Difuminado privado"]
     },
@@ -328,16 +328,16 @@ const copy = {
     waitlist: {
       eyebrow: "Acceso anticipado",
       title: "Tu ordenador debería entender tu atención.",
-      copy: "Únete a la lista temprana de NeuroFlow y ayuda a dar forma al futuro de la computación centrada en las personas.",
+      copy: "Únete a la lista temprana de ElyraOs y ayuda a dar forma al futuro de la computación centrada en las personas.",
       placeholder: "tu@email.com",
       button: "Unirme a la lista",
-      success: "Ya estás en la lista temprana. NeuroFlow lo mantendrá en calma por ahora.",
+      success: "Ya estás en la lista temprana. ElyraOs lo mantendrá en calma por ahora.",
       error: "Introduce un email válido para unirte a la lista.",
       sendError: "No hemos podido enviar el registro todavía. Inténtalo de nuevo en un momento.",
       configError: "Las notificaciones por email todavía no están configuradas.",
       secondary: "Explorar el concepto"
     },
-    footer: ["NeuroFlow - Computación calmada para macOS.", "Diseñado para la atención humana, construido para macOS."]
+    footer: ["ElyraOs - Computación calmada para macOS.", "Diseñado para la atención humana, construido para macOS."]
   }
 } as const;
 
@@ -443,7 +443,7 @@ function LogoMark({ className = "size-12" }: { className?: string }) {
 function BrandWordmark({ tagline, compact = false }: { tagline?: string; compact?: boolean }) {
   return (
     <div className={cn("flex flex-col items-center", compact ? "gap-1" : "gap-4")}>
-      <div className="brand-word text-white">NEUROFLOW</div>
+      <div className="brand-word text-white">ELYRAOS</div>
       {tagline ? <div className="brand-tagline">{tagline}</div> : null}
     </div>
   );
@@ -468,7 +468,7 @@ function Nav({
       <nav className="glass mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-3 md:px-5">
         <a href="#" className="flex items-center gap-3">
           <LogoMark className="size-10" />
-          <span className="hidden text-xs font-medium uppercase tracking-[0.34em] text-white/90 sm:inline">NeuroFlow</span>
+          <span className="hidden text-xs font-medium uppercase tracking-[0.34em] text-white/90 sm:inline">ElyraOs</span>
         </a>
         <div className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
           <a className="transition hover:text-white" href="#solution" onClick={(event) => scrollToSection(event, "solution")}>{t.nav.overlay}</a>

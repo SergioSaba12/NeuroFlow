@@ -14,7 +14,7 @@ function escapeHtml(value: string) {
 export async function POST(request: Request) {
   const resendApiKey = process.env.RESEND_API_KEY;
   const to = process.env.WAITLIST_TO_EMAIL;
-  const from = process.env.RESEND_FROM_EMAIL ?? "NeuroFlow <onboarding@resend.dev>";
+  const from = process.env.RESEND_FROM_EMAIL ?? "ElyraOs <onboarding@resend.dev>";
 
   if (!resendApiKey || !to) {
     return NextResponse.json(
@@ -48,11 +48,11 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       from,
       to,
-      subject: "New NeuroFlow waitlist signup",
-      text: `New NeuroFlow waitlist signup:\n\nEmail: ${email}\nSubmitted at: ${submittedAt}`,
+      subject: "New ElyraOs waitlist signup",
+      text: `New ElyraOs waitlist signup:\n\nEmail: ${email}\nSubmitted at: ${submittedAt}`,
       html: `
         <div style="font-family: Arial, sans-serif; color: #111827; line-height: 1.6;">
-          <h1 style="margin: 0 0 16px; font-size: 24px;">New NeuroFlow waitlist signup</h1>
+          <h1 style="margin: 0 0 16px; font-size: 24px;">New ElyraOs waitlist signup</h1>
           <p style="margin: 0 0 8px;"><strong>Email:</strong> ${safeEmail}</p>
           <p style="margin: 0; color: #6b7280;"><strong>Submitted at:</strong> ${submittedAt}</p>
         </div>

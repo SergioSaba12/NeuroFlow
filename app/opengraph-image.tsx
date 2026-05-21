@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "NeuroFlow - Adapt your environment. Protect your mind.";
+export const alt = "ElyraOs - Adapt your environment. Protect your mind.";
 export const size = {
   width: 1200,
   height: 630
@@ -8,7 +8,7 @@ export const size = {
 
 export const contentType = "image/png";
 
-function NeuroFlowMark() {
+function ElyraOsMark() {
   return (
     <svg width="390" height="300" viewBox="0 0 220 170" style={{ overflow: "visible" }}>
       <defs>
@@ -112,7 +112,7 @@ export default function Image() {
             transform: "translateY(-6px)"
           }}
         >
-          <NeuroFlowMark />
+          <ElyraOsMark />
           <div
             style={{
               fontSize: 86,
@@ -123,7 +123,7 @@ export default function Image() {
               textShadow: "0 0 28px rgba(255,255,255,0.25)"
             }}
           >
-            NEUROFLOW
+            ELYRAOS
           </div>
           <div
             style={{
